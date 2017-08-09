@@ -1,0 +1,27 @@
+@font-face {
+    font-family: Avenger;
+    src: url("../fonts/AVENGEANCE HEROIC AVENGER AT.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/AVENGEANCE HEROIC AVENGER AT.ttf") format('truetype'),
+         url("../fonts/AVENGEANCE HEROIC AVENGER AT.otf");
+}
+
+body {
+  background: #22C7FD;
+}
+p {
+  text-align: center;
+  font-family: Avenger;
+  font-weight: bold;
+  color: #F79F28;
+}
+#timer {
+  letter-spacing: 30px;
+  font-size: 375px;
+  margin-top: -50px;
+  text-shadow: 10px 10px 10px #000;;
+}
+#completed {
+  letter-spacing: 15px;
+  font-size: 85px;
+  text-shadow: 5px 5px 5px #000;
+}

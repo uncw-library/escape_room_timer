@@ -1,16 +1,12 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<style>
-p {
-  text-align: center;
-  font-size: 60px;
-}
-</style>
+  <link href="styles/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-<p id="demo"></p>
+<p id="completed"></p>
+<p id="timer"></p>
 
 <script>
 
@@ -43,8 +39,9 @@ if(urlString.indexOf('?time=0:') !== -1) {
   total_time = total_time.slice(2,7);
       console.log(total_time);
 
-  document.getElementById("demo").innerHTML = "Congradulations, You have escaped!!!"
-          + "<br>You completed the room in: " + total_time;
+  document.getElementById("completed").innerHTML = "Congratulations, You have escaped!!!"
+          + "<br>You completed the room in: ";
+  document.getElementById("timer").innerHTML = total_time;
 
 } else {
 
@@ -67,12 +64,12 @@ if(urlString.indexOf('?time=0:') !== -1) {
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Output the result in an element with id="demo"
-      document.getElementById("demo").innerHTML =minutes + ":" + seconds;
+      document.getElementById("timer").innerHTML =minutes + ":" + seconds;
 
       // If the count down is over, write some text
       if (distance < 0) {
           clearInterval(x);
-          document.getElementById("demo").innerHTML = "EXPIRED";
+          document.getElementById("timer").innerHTML = "EXPIRED";
       }
   }, 1000);
 }
