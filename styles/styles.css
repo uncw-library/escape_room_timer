@@ -17,7 +17,7 @@ p {
 #timer {
   letter-spacing: 30px;
   font-size: 375px;
-  margin-top: -50px;
+  line-height: 0px;
   text-shadow: 10px 10px 10px #000;;
 }
 #completed {
