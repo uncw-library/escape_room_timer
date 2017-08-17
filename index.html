@@ -2,6 +2,10 @@
 <html>
 <head>
   <link href="styles/styles.css" rel="stylesheet" type="text/css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>  
 </head>
 <body>
 
@@ -11,6 +15,13 @@
 <script>
 
 var urlString = window.location.href ;
+
+$(document).on('keypress', function(e){
+    if (String.fromCharCode(e.which).toLowerCase() == 's') {
+        var time = $("#timer").text();
+        window.location.replace("?time=0:" + time);
+    }
+})
 
 function parseURLParams(url) {
     var queryStart = url.indexOf("?") + 1,
