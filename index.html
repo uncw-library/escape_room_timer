@@ -50,7 +50,9 @@ if(urlString.indexOf('?time=0:') !== -1) {
   total_time = total_time.slice(2,7);
       console.log(total_time);
 
-  document.getElementById("completed").innerHTML = "Congratulations, You have escaped!!!"
+  document.getElementById("completed").innerHTML = "<audio autoplay> <source src='sounds/cheering.mp3' type='audio/mpeg'>"
+		  + "Your browser does not support the audio element. </audio>"
+          + "Congratulations, You have escaped!!!"
           + "<br>You completed the room in: ";
   document.getElementById("timer").innerHTML = total_time;
 
