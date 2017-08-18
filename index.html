@@ -18,8 +18,12 @@ var urlString = window.location.href ;
 
 $(document).on('keypress', function(e){
     if (String.fromCharCode(e.which).toLowerCase() == 's') {
-        var time = $("#timer").text();
-        window.location.replace("?time=0:" + time);
+        var seconds = 60 - Number($("#timer").text().slice(-2));
+        var minutes = 59 - Number($("#timer").text().slice(0, 2));
+        seconds = ("0" + seconds).slice(-2);
+        minutes = ("0" + minutes).slice(-2);
+
+        window.location.replace("?time=0:" + minutes + ":" + seconds);
     }
 })
 
